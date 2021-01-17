@@ -8,7 +8,7 @@ class PurchasesController < ApplicationController
       amount: @product.amount,
       currency: 'usd',
     })
-    render :layout => false
+    # render :layout => false
   end
 
   def create
