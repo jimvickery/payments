@@ -1,0 +1,22 @@
+<%= simple_form_for(@product) do |f| %>
+<div class="remote">
+</br>
+
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    <%= f.input :name %>
+    </br>
+    <%= f.input :description %>
+    </br>
+    <%= f.input :amount %>
+    </br>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+</br>
+</div>
+</br>

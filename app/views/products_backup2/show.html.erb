@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+<h2>Show Product</h2>
+<p>
+  <strong>Name:</strong>
+  </br>
+  <%= @product.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  </br>
+  <%= @product.description %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  </br>
+  <%= formatted_amount(@product.amount) %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
+
+<%= link_to 'Purchase', product_purchase_path(@product), class: 'btn btn-primary' %>

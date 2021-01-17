@@ -1,24 +1,23 @@
-<p id="notice"><%= notice %></p>
-<h2>Show Product</h2>
-<p>
-  <strong>Name:</strong>
-  </br>
-  <%= @product.name %>
-</p>
+<div class="page-header">
+  <%= link_to products_path, class: 'btn btn-default' do %>
+    All Products
+  <% end %>
+  <%= link_to edit_product_path(@product), class: 'btn btn-primary' do %>
+    Edit
+  <% end %>
+  <h1>Show product</h1>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  </br>
-  <%= @product.description %>
-</p>
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @product.name %></dd>
 
-<p>
-  <strong>Amount:</strong>
-  </br>
-  <%= formatted_amount(@product.amount) %>
-</p>
+  <dt>Description:</dt>
+  <dd><%= @product.description %></dd>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+  <dt>Amount:</dt>
+  <dd><%= @product.amount %></dd>
+  <%= link_to 'Purchase', product_purchase_path(@product), class: 'btn btn-primary' %>
 
-<%= link_to 'Purchase', product_purchase_path(@product), class: 'btn btn-primary' %>
+
+</dl>
