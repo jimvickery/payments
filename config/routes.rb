@@ -1,15 +1,18 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  resources :movies
   resources :products do
     resource :purchase
   end
+  
   get '/privacy', to: 'home#privacy'
   get '/terms', to: 'home#terms'
     authenticate :user, lambda { |u| u.admin? } do
       mount Sidekiq::Web => '/sidekiq'
     end
 
+  resource :pricing, controller: :pricing
 
   resources :notifications, only: [:index]
   resources :announcements, only: [:index]

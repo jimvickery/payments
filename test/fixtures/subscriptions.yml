@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  stripe_id: MyString
+  stripe_plan: MyString
+  status: MyString
+  trails_ends_at: 2021-01-17 18:19:19
+  ends_at: 2021-01-17 18:19:19
+  quantity: 1
+
+two:
+  user: two
+  stripe_id: MyString
+  stripe_plan: MyString
+  status: MyString
+  trails_ends_at: 2021-01-17 18:19:19
+  ends_at: 2021-01-17 18:19:19
+  quantity: 1
