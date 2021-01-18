@@ -12,7 +12,8 @@ Rails.application.routes.draw do
       mount Sidekiq::Web => '/sidekiq'
     end
 
-  resource :pricing, controller: :pricing
+    resource :pricing, controller: :pricing
+  resource :subscription
 
   resources :notifications, only: [:index]
   resources :announcements, only: [:index]
